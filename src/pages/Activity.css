@@ -1,0 +1,105 @@
+.main-content--activity-page {
+    margin-bottom: 2rem;
+}
+
+.header__activity{
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.activity-card, 
+.error-card {
+    margin: 0.5rem 1rem;
+    background-color: white;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    border-radius: 2rem;
+}
+
+.activity-card__header {
+    padding: 0.5rem;
+    background-color:  #8e8cc2;
+    color: white;
+    font-size: 0.7rem;
+}
+
+.card__info__type {
+    padding-top: 0.3rem;
+    font-style: italic;
+    font-size: 0.8rem;
+}
+
+.input-container {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card__info--circle { 
+    line-height: 80px;
+    width: 80px; 
+    height: 80px; 
+    border-radius: 50%; 
+    background-color: rgb(172, 204, 238);
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 1rem auto;
+  } 
+  .no_participants {
+    border-radius: 0.2rem;
+    font-family: 'Work Sans', sans-serif;
+    border:none;
+    background-color: rgb(172, 204, 238);
+    padding: 0.3rem;
+    margin-left: 0.5rem;
+    text-align: center;
+}
+.form {
+    margin-bottom: 1rem;
+}
+
+@media all and (min-width: 840px) {
+    .header__activity{ 
+        font-size: 3rem;
+    }
+
+    .activity-card, 
+    .error-card { 
+        max-width: 1000px;
+        margin: 2rem auto;
+    }
+
+    .activity-card__header {
+        font-size: 1.5rem;
+    }
+
+    .activity-card__info {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .card__info__type {
+        font-size: 1.2rem;
+    }
+
+    .card__info--circle {  
+        line-height: 200px;
+        width: 200px; 
+        height: 200px; 
+        font-size: 3rem;
+    }
+
+    .card__info__text{
+        font-size: 1.2rem;
+    }
+
+    .no_participants, 
+    .label__participants { 
+        margin-top: 1.2rem;
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family:'Work Sans', sans-serif;
+  background-repeat: no-repeat;
+  background-image: url(https://i.pinimg.com/originals/49/38/6a/49386a2152e55bac790bf88982e1f804.jpg);
+  background-size: cover;
+  height: 100vh;
+}

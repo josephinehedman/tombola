@@ -1,0 +1,44 @@
+import './App.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import Header from './components/Header';
+import About from './pages/About';
+import Activity from './pages/Activity';
+import Home from './pages/Home';
+
+function App() {
+  const [activity, setActivity] = useState('');
+  const path = process.env.NODE_ENV === 'development' ? 'http://localhost:3001' : 'https://agile-beyond-36752.herokuapp.com/';
+
+  const getData = () => {
+    fetch(path)
+      .then(res => res.json())
+      .then(data => setActivity(data))
+      .catch(error => console.log(error));
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  return (
+    <>
+      <Router>
+      <Header />
+        <Switch>
+          <Route path="/personal-project-hackday-client" exact>
+            <Home getData={getData} />
+          </Route>
+          <Route path="/about" exact>
+            <About />
+          </Route>
+          <Route path="/activity" exact>
+            <Activity activity={activity} getData={getData} />
+          </Route>
+        </Switch>
+      </Router>
+    </>
+  );
+}
+
+export default App;
