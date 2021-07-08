@@ -26,7 +26,7 @@ function App() {
       <Router>
       <Header />
         <Switch>
-          <Route path="/personal-project-hackday-client" exact>
+          <Route path="/tombola" exact>
             <Home getData={getData} />
           </Route>
           <Route path="/about" exact>
