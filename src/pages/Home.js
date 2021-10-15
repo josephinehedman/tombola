@@ -1,10 +1,11 @@
-import Button from '../components/Button';
-import './Home.css';
+import Button from "../components/Button";
+import "./Home.css";
 
 const Home = ({ getData }) => (
   <main className="main-content">
     <section className="main-container--home-page">
       <h1 className="header__welcome">Welcome to Tombola!</h1>
+      <p> </p>
       <Button getData={getData} />
     </section>
   </main>
