@@ -5,7 +5,7 @@ const Home = ({ getData }) => (
   <main className="main-content">
     <section className="main-container--home-page">
       <h1 className="header__welcome">Welcome to Tombola!</h1>
-      <p> </p>
+      <p> Ps. It might take a little while to connect to the Bored API, so the first activity could take some time to load. </p>
       <Button getData={getData} />
     </section>
   </main>
