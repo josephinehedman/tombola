@@ -1,20 +1,23 @@
-import './App.css';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import React, { useState, useEffect } from 'react';
-import Header from './components/Header';
-import About from './pages/About';
-import Activity from './pages/Activity';
-import Home from './pages/Home';
+import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import Header from "./components/Header";
+import About from "./pages/About";
+import Activity from "./pages/Activity";
+import Home from "./pages/Home";
 
 function App() {
-  const [activity, setActivity] = useState('');
-  const path = process.env.NODE_ENV === 'development' ? 'http://localhost:3001' : 'https://agile-beyond-36752.herokuapp.com/';
+  const [activity, setActivity] = useState("");
+  const path =
+    process.env.NODE_ENV === "development"
+      ? "http://localhost:3001"
+      : process.env.HEROKU_PATH;
 
   const getData = () => {
     fetch(path)
-      .then(res => res.json())
-      .then(data => setActivity(data))
-      .catch(error => console.log(error));
+      .then((res) => res.json())
+      .then((data) => setActivity(data))
+      .catch((error) => console.log(error));
   };
 
   useEffect(() => {
@@ -24,7 +27,7 @@ function App() {
   return (
     <>
       <Router>
-      <Header />
+        <Header />
         <Switch>
           <Route path="/tombola" exact>
             <Home getData={getData} />
