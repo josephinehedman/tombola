@@ -8,10 +8,7 @@ import Home from './pages/Home';
 
 function App() {
   const [activity, setActivity] = useState('');
-  const path =
-    process.env.NODE_ENV === 'development'
-      ? 'http://localhost:3001'
-      : process.env.HEROKU_PATH;
+  const path = process.env.NODE_ENV === 'development' ? 'http://localhost:3001' : process.env.HEROKU_PATH;
 
   const getData = () => {
     fetch(path)
