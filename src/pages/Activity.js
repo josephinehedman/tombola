@@ -26,7 +26,7 @@ const Activity = ({ activity, getData }) => {
               <div className="card__info">
                 {activity.price === 0 && <p className="card__info--circle">
                 Free</p> }
-               {activity.price > 0 && activity.price <= 0.33 && <p className="card__info--circle">
+               {activity.price >= 0 && activity.price <= 0.33 && <p className="card__info--circle">
                 $</p> }
                 {activity.price >= 0.34 && activity.price <= 0.66 && <p className="card__info--circle">
                 $</p> }

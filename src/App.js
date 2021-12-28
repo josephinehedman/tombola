@@ -12,9 +12,9 @@ function App() {
 
   const getData = () => {
     fetch(path)
-      .then((res) => res.json())
-      .then((data) => setActivity(data))
-      .catch((error) => console.log(error));
+      .then(res => res.json())
+      .then(data => setActivity(data))
+      .catch(error => setActivity({ error }));
   };
 
   useEffect(() => {
