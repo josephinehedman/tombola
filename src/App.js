@@ -6,7 +6,7 @@ import About from './pages/About';
 import Activity from './pages/Activity';
 import Home from './pages/Home';
 
-function App() {
+const App = () => {
   const [activity, setActivity] = useState('');
   const path = process.env.NODE_ENV === 'development' ? 'http://localhost:3001' : process.env.HEROKU_PATH;
 
@@ -39,6 +39,6 @@ function App() {
       </Router>
     </>
   );
-}
+};
 
 export default App;
