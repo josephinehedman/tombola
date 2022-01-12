@@ -4,7 +4,7 @@ import './Header.css';
 const Header = () => (
   <header className="header">
     <nav className="header__navbar">
-      <Link to="/tombola">
+      <Link to="/">
         <h1 className="navbar__logo">Tombola</h1>
       </Link>
       <ul className="nav-list">
