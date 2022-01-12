@@ -28,13 +28,13 @@ const App = () => {
       <Router basename='tombola'>
         <Header />
         <Switch>
-          <Route path="/tombola" exact>
+          <Route path="/" exact>
             <Home getData={getData} />
           </Route>
-          <Route path="/about" >
+          <Route path="/about" exact>
             <About />
           </Route>
-          <Route path="/activity" >
+          <Route path="/activity" exact>
             <Activity
               activity={activity}
               getData={getData}
