@@ -9,17 +9,14 @@ import Home from './pages/Home';
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [activity, setActivity] = useState('');
-  const path =
-    process.env.NODE_ENV === 'development'
-      ? 'http://localhost:3001'
-      : process.env.REACT_APP_HEROKU_PATH;
+  const path = process.env.NODE_ENV === 'development' ? 'http://localhost:3001' : process.env.REACT_APP_HEROKU_PATH;
 
   const getData = () => {
     fetch(path)
-      .then((res) => res.json())
-      .then((data) => setActivity(data))
+      .then(res => res.json())
+      .then(data => setActivity(data))
       .then(() => setIsLoading(false))
-      .catch((error) => setActivity({ error }));
+      .catch(error => setActivity({ error }));
   };
 
   useEffect(() => {
@@ -28,16 +25,16 @@ const App = () => {
 
   return (
     <>
-      <Router>
+      <Router basename='tombola'>
         <Header />
         <Switch>
           <Route path="/tombola" exact>
             <Home getData={getData} />
           </Route>
-          <Route path="/about" exact>
+          <Route path="/about" >
             <About />
           </Route>
-          <Route path="/activity" exact>
+          <Route path="/activity" >
             <Activity
               activity={activity}
               getData={getData}
