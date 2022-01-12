@@ -1,9 +1,17 @@
 import Button from '../components/Button';
 import './Activity.css';
 
-const Activity = ({ activity, getData }) => {
+const Activity = ({ activity, getData, isLoading }) => {
   const returnPercentageAccessibility = accessibility => Math.round((1 - accessibility) * 100);
   const accessibility = returnPercentageAccessibility(activity.accessibility);
+
+  if (isLoading) {
+    return (
+      <main className="main-content--activity-page">
+        <div className="loading-card"> <h1>Loading activity, please wait</h1></div>
+      </main>
+    );
+  }
 
   return (
     <main className="main-content--activity-page">

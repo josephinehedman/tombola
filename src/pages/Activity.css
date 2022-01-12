@@ -9,6 +9,7 @@
 }
 
 .activity-card, 
+.loading-card,
 .error-card {
     margin: 0.5rem 1rem;
     background-color: white;

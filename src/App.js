@@ -7,6 +7,7 @@ import Activity from './pages/Activity';
 import Home from './pages/Home';
 
 const App = () => {
+  const [isLoading, setIsLoading] = useState(true);
   const [activity, setActivity] = useState('');
   const path = process.env.NODE_ENV === 'development' ? 'http://localhost:3001' : process.env.REACT_APP_HEROKU_PATH;
 
@@ -14,6 +15,7 @@ const App = () => {
     fetch(path)
       .then(res => res.json())
       .then(data => setActivity(data))
+      .then(() => setIsLoading(false))
       .catch(error => setActivity({ error }));
   };
 
@@ -33,7 +35,7 @@ const App = () => {
             <About />
           </Route>
           <Route path="/activity" exact>
-            <Activity activity={activity} getData={getData} />
+            <Activity activity={activity} getData={getData} isLoading={isLoading} />
           </Route>
         </Switch>
       </Router>
