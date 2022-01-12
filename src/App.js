@@ -25,7 +25,7 @@ const App = () => {
 
   return (
     <>
-      <Router>
+      <Router basename='tombola'>
         <Header />
         <Switch>
           <Route path="/tombola" exact>
