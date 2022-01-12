@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/tombola/static/css/main.bf543ae3.chunk.css",
+    "main.js": "/tombola/static/js/main.42ec4109.chunk.js",
+    "main.js.map": "/tombola/static/js/main.42ec4109.chunk.js.map",
+    "runtime-main.js": "/tombola/static/js/runtime-main.a2479e2a.js",
+    "runtime-main.js.map": "/tombola/static/js/runtime-main.a2479e2a.js.map",
+    "static/js/2.32f1dd55.chunk.js": "/tombola/static/js/2.32f1dd55.chunk.js",
+    "static/js/2.32f1dd55.chunk.js.map": "/tombola/static/js/2.32f1dd55.chunk.js.map",
+    "static/js/3.2f93c32a.chunk.js": "/tombola/static/js/3.2f93c32a.chunk.js",
+    "static/js/3.2f93c32a.chunk.js.map": "/tombola/static/js/3.2f93c32a.chunk.js.map",
+    "index.html": "/tombola/index.html",
+    "static/css/main.bf543ae3.chunk.css.map": "/tombola/static/css/main.bf543ae3.chunk.css.map",
+    "static/js/2.32f1dd55.chunk.js.LICENSE.txt": "/tombola/static/js/2.32f1dd55.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a2479e2a.js",
+    "static/js/2.32f1dd55.chunk.js",
+    "static/css/main.bf543ae3.chunk.css",
+    "static/js/main.42ec4109.chunk.js"
+  ]
+}
