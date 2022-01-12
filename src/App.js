@@ -8,7 +8,7 @@ import Home from './pages/Home';
 
 const App = () => {
   const [activity, setActivity] = useState('');
-  const path = process.env.NODE_ENV === 'development' ? 'http://localhost:3001' : process.env.HEROKU_PATH;
+  const path = process.env.NODE_ENV === 'development' ? 'http://localhost:3001' : process.env.REACT_APP_HEROKU_PATH;
 
   const getData = () => {
     fetch(path)
@@ -26,13 +26,13 @@ const App = () => {
       <Router>
         <Header />
         <Switch>
-          <Route path='/tombola' exact>
+          <Route path="/tombola" exact>
             <Home getData={getData} />
           </Route>
-          <Route path='/about' exact>
+          <Route path="/about" exact>
             <About />
           </Route>
-          <Route path='/activity' exact>
+          <Route path="/activity" exact>
             <Activity activity={activity} getData={getData} />
           </Route>
         </Switch>
